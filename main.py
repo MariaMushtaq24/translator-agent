@@ -7,7 +7,6 @@ import os
 load_dotenv()
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
-print(gemini_api_key)
 # Check if the API key is present; if not, raise an error
 if not gemini_api_key:
     raise ValueError("GEMINI_API_KEY is not set. Please ensure it is defined in your .env file.")
@@ -51,8 +50,8 @@ while True:
     # Run the translation
     response = Runner.run_sync(
         translator,
-        input=user_input,
-        run_config=config
+        input= user_input,
+        run_config= config
     )
 
     # Show translation
